@@ -1,0 +1,123 @@
+
+/* Login */
+.mainContainer {
+    background-color: #F9F9F9;
+    width: 400px;
+    padding: 50px;
+
+    & > h3 {
+        color: #209cee;
+    }
+
+    .loginTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        border-bottom: 1px solid black;
+    }
+
+    .loginBody {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+
+        & input {
+            outline: none;
+            height: 30px;
+            width: 100%;
+            padding: 2px 6px;
+        }
+        & button {
+            width: 120px;
+            height: 40px;
+            background-color: #2C3E50;
+            color: white;
+            align-self: center;
+            padding: 2px 6px;
+            &:hover {
+                background-color: #3d556d;
+            }
+        }
+    }
+    .loginFooter {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 30px;
+    }
+
+}
+
+/* Register */
+.registerContainer {
+    background-color: #F9F9F9;
+    width: 400px;
+    padding: 50px;
+
+    & > h3 {
+        color: #209cee;
+    }
+
+    .registerTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        border-bottom: 1px solid black;
+    }
+
+    .registerBody {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0;
+
+        & input {
+            outline: none;
+            height: 30px;
+            width: 100%;
+            padding: 2px 6px;
+        }
+        & button {
+            width: 120px;
+            height: 40px;
+            background-color: #2C3E50;
+            color: white;
+            align-self: center;
+            padding: 2px 6px;
+            &:hover {
+                background-color: #3d556d;
+            }
+        }
+    }
+    .registerFooter {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 30px;
+    }
+
+}
+
+/* Navbar */
+.navbar {
+    height: 50px;
+    width: 100%;
+    background-color:#6C63FF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+
+    & > ul{
+        display: flex;
+        gap: 10px;
+        & a{
+            color: white !important;
+        }
+    }
+    }

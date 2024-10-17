@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#root {
+  max-width: 1380px;
+  margin: 0 auto; 
+  font-family: "Poppins", sans-serif;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+ 
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: black !important;
+}
+.active{
+  color: beige;
+  border-bottom: solid rgb(255, 255, 255) 2px
+  ;
+}
+.highlight-present {
+  background-color: green; /* Change to your preferred color */
+}
+
+.highlight-absent {
+  background-color: red; /* Change to your preferred color */
+}
+
+.custom-calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.days-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for the days of the week */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.day {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.day.present {
+  background-color: green; /* Highlight color for present days */
+  color: white; /* Change text color for better visibility */
+}

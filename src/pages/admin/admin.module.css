@@ -1,0 +1,150 @@
+.mainRegisterContainer{
+    background-color: #F9F9F9;
+    width: 400px;
+    padding: 50px;
+
+    .registerTop{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        border-bottom: 1px solid black; 
+    }
+
+    .registerBody{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+
+        & input{
+            outline: none;
+            height: 30px;
+            width: 100%;
+            padding: 2px 6px; 
+        }& button{
+        width: 120px;
+        height: 40px;
+        background-color: #2C3E50;
+        color: white;
+        align-self: center; 
+        padding: 2px 6px; 
+
+        &:hover{
+background-color: #3d556d;
+        }
+    }
+    }
+    .registerFooter{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 30px;
+    }
+
+    
+
+}
+/* register Entity */
+
+.registerEntity{
+
+    display: flex;justify-content: center;
+    align-items: center;
+    .registerContainer {
+    background-color: #F9F9F9;
+    width: 400px;
+    padding: 50px;
+
+    & > h3 {
+        color: #209cee;
+    }
+
+    .registerTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        border-bottom: 1px solid black;
+        padding: 20px 0;
+    }
+
+    .registerBody {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px 0;
+
+        & input {
+            outline: none;
+            height: 30px;
+            width: 100%;
+            padding: 2px 6px;
+        }
+        & button {
+            width: 120px;
+            height: 40px;
+            background-color: #2C3E50;
+            color: white;
+            align-self: center;
+            padding: 2px 6px;
+            &:hover {
+                background-color: #3d556d;
+            }
+        }
+    }
+    .registerFooter {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 30px;
+    }
+
+}
+}
+
+/* dashbaord */
+.dashboardContianer{
+
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    & h1{
+        text-align: left;
+    }
+    & > a{
+        color: #6C63FF !important; 
+        font-size: 2rem;
+    }
+}
+
+.EntityContainer{
+
+    padding: 20px;
+
+    & h1{
+        text-align: center;
+    }
+
+    .studentTable {
+        width: 100%;
+       
+        border-collapse: collapse;
+    }
+    
+    .studentTable th, .studentTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+    
+    .studentTable th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        text-align: left;
+        text-align: center;
+    }
+}

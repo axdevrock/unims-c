@@ -1,0 +1,52 @@
+.announcementPost{
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    top: -50px;
+    left: 0;
+    z-index: 99;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .body{
+        display: flex;  
+        width: 600px;
+        flex-direction: column;
+
+        .top{
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        & > form{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            & input{
+                height: 40px;
+                outline: none;
+                padding: 0 4px;
+                font-size: 1rem;
+            }
+            & textarea{
+                height: 200px;
+                outline: none;
+                padding: 0 4px;
+                font-size: 1rem;
+            }
+
+            & button{
+                height: 40px;
+                border: none;
+                color: white;
+                background-color: #6C63FF;
+            }
+        }
+
+
+    }
+}

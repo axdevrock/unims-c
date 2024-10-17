@@ -1,0 +1,110 @@
+.marks {
+    padding: 20px;
+margin: 0;
+
+.marks h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .marks h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .studentlist {
+    display: flex;
+  }
+  
+  .student {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .student p {
+    margin: 0;
+  }
+  
+  .student:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .attendance-details {
+    margin-top: 20px; 
+  }
+  
+  .attendance-details p {
+    margin-bottom: 10px; 
+  }
+  
+  .inmarks input {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  .inmarks button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  }
+  
+  .attendence {
+    margin: 0;
+    padding: 20px;
+    border-radius: 5px;
+    
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.student-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.student {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+ 
+  
+}
+
+.student:hover {
+    background-color: #f0f0f0;
+}
+
+.attendance-details {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    .outStu {
+        display: flex;
+        gap: 30px;
+
+    }
+}
+
+.attendence-date {
+    padding: 10px;
+    margin: 5px;
+    border: 10px solid #ccc;
+    border-radius: 5px;
+}
+
+}

@@ -1,0 +1,127 @@
+.courseSingle{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: left !important;
+    align-items: left !important;
+    position: relative;
+
+    .path{
+        text-align: left; 
+        padding: 10px 0;
+        border-bottom: 2px solid grey;
+    }
+
+    .links{
+        display: flex;
+        padding: 20px 10px;
+        background-color: #6C63FF;
+        justify-content: space-between;
+
+        & a{
+            color: white !important;
+            font-size: 1.2rem;
+        }
+    }
+
+    .announcement{
+        display: flex;
+        flex-direction: column;
+        
+        padding: 10px;
+        
+
+        .announcementTop {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        
+    }
+}
+
+/* Announcement-display */
+
+.announcementDisplay{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .announcements{
+        display: flex;
+       justify-content: space-between;
+       align-items: center;
+       border: solid 1px grey;
+            border-radius: 12px;
+            padding: 12px;
+
+        .announcementLeft{
+             text-align: left;
+             flex: 10;
+             & p{
+                text-align: left;
+             }
+
+        }
+
+        .announcementRight{
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+/* Materal Page */
+
+.materialPage{
+    display: flex;
+    padding: 20px;
+    /* align-items: flex-start; */
+    flex-direction: column;
+    position: relative;
+
+    .materialTop{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* Materal Dosplay component */
+
+.materialDisplay{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .materials{
+        display: flex;
+       justify-content: space-between;
+       align-items: center;
+       border: solid 1px grey;
+            border-radius: 12px;
+            padding: 12px;
+
+        .announcementLeft{
+             text-align: left;
+             flex: 10;
+             & p{
+                text-align: left;
+             }
+
+        }
+
+        .materialsRight{
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+
+
+/* submit assignment */
+.submitt{
+    
+}

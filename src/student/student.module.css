@@ -1,0 +1,109 @@
+/* student course list */
+.dashboardStudent{
+
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+    & h1{
+        text-align: left;
+    }
+}
+
+
+/* All course */
+
+.courseContainer {
+    margin-top: 20px;
+    
+.courseList {
+    display:flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+      gap: 10px;
+}
+
+.course {
+    background-color: #6C63FF;
+    padding: 12px;
+    width: 350px;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+   
+
+    align-items: left;
+
+    & a{
+        color: white  !important;
+    }
+
+    & button{
+        background-color: rgb(0, 0, 0);
+        border: none;
+        height: 40px;
+        border-radius: 12px;
+        margin-top: 12px;
+        color: white;
+        & hover{
+            background-color: olivedrab; ;
+        }
+    }
+
+    &:hover{
+        background-color: #0056b3;
+    }
+    
+}
+}
+
+
+
+/* My course */
+
+.myCourseContainer{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    & h1{
+        text-align: left;
+    }
+
+    .courseList{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        
+    }
+
+
+    .course {
+        background-color: #6C63FF;
+    padding: 12px;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    & a{
+        color: rgb(0, 0, 0)  !important;
+        padding: 4px;
+        background-color: whitesmoke;
+        border-radius: 12px;
+    }
+    
+
+    &:hover{
+        background-color: #0056b3;
+    }
+    }
+
+
+}
+
+

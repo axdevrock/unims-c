@@ -1,0 +1,97 @@
+.assigmnmentContainer{
+    position: relative;
+    padding: 20px;
+
+    .top{
+    
+    }
+
+    .bottom{
+        
+    }
+}
+
+/* material */
+.materialContainer{
+
+    padding: 20px;
+
+    .top{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+      
+        
+    
+    }
+    
+
+}
+
+
+   .assignmentTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.assignmentTable th, .assignmentTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+& td{
+    &> button{
+        height: 40px;
+        margin-right: 10px;
+    }
+}
+
+.assignmentTable th {
+    background-color: #f2f2f2;
+}
+
+.assignmentTable tr:hover {
+    background-color: #f2f2f2;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal.open {
+    display: block;
+}
+
+.modalContent {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 80%; 
+    height: 80vh;
+}
+
+.closeBtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

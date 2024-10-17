@@ -1,0 +1,102 @@
+
+/*  create a coursse */
+.professorCreateCourse{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+   .createCourseForm {
+    padding: 20px;
+    
+
+/* align-items: center; */
+    width: 400px;
+    /* text-align: left;  */
+    
+    & h1{
+        text-align: left;
+    }
+
+    
+
+.formGroup {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.createButton {
+    background-color: #007bff;
+    width: 100%;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.createButton:hover {
+    background-color: #0056b3;
+}
+
+}
+ 
+}
+
+/* professorMyCourse course */
+.professorMyCourse{
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .AllCourses{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+
+
+}
+/* single course sye */
+.Mycourse{
+    background-color: #6C63FF;
+    padding: 12px;
+    width: 300px;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    & a{
+        color: white  !important;
+    }
+    
+    
+
+   
+    
+
+    &:hover{
+        background-color: #0056b3;
+    }
+
+
+}

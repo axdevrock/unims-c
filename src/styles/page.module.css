@@ -1,0 +1,27 @@
+.registerContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #6C63FF;
+    display: flex;
+    .homeImage{
+        flex: 6;
+        & img{
+            width: 90%;
+            height: 90%;
+        }
+    }
+    .registerContent{
+        flex: 6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        & h1{
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+
+        }
+    }
+}
