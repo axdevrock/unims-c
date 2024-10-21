@@ -40,10 +40,10 @@ import CourseDashboard from './screens/student/CourseDashboard';
 import CourseDashbaordProfessor from './screens/CourseDashbaordProfessor';
 
 
-//// axios.defaults.baseURL = 'http://localhost:8000/api/v1';
-const key = import.meta.env.VITE_API;
-axios.defaults.baseURL = key;
-
+axios.defaults.baseURL = 'http://localhost:8000/api/v1';
+// const key = import.meta.env.VITE_API;
+// axios.defaults.baseURL = key;
+// 
 const App = () => {
 
     return (

@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useUserContext } from "../../../context/userContext"; 
-import MarksModal from "../../utils/MarksModel";
-
+import MarksModal from "../../utils/MarksModel"; 
 const SingleTestPage = () => {
   const { user } = useUserContext();
   const [testDetails, setTestDetails] = useState([]);
@@ -99,6 +98,7 @@ const SingleTestPage = () => {
 
   // Handle test submission
   async function handleSubmitTest() {  
+ 
 
     try {
         const { data } = await axios.post(`/quiz/submit-test`,{

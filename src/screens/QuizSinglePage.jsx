@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import OuterContainer, { OuterContainerNarrow } from "../Refactor/refactorComponents"
 import axios from "axios";
 import { toast } from "react-toastify";
-import { json, useParams } from "react-router-dom";
+import {   useParams } from "react-router-dom";
 
 
 const QuizSinglePage = () => {
@@ -73,7 +73,10 @@ const QuizSinglePage = () => {
 
 export default QuizSinglePage
 
-function StudentResponse({response,question}){ 
+function StudentResponse({response,question}){  
+  console.log(response);
+  
+  
     const [isResponseOpen, setisResponseOpen] = useState(false)
     return(
         
@@ -98,6 +101,15 @@ function StudentResponse({response,question}){
 }
 
 export function ModelQuiz({ open, setOpen, response, questions }) {
+
+  console.log('s r-------------------------');
+  console.log(response.response);
+  
+  // console.log('t q -------------------------');
+  // console.log(questions);
+  
+  console.log('--- END ----------------------');
+  
 
   const [addScore, setAddScore] = useState(response?.score || 0); 
   const {id} = useParams();
@@ -151,7 +163,7 @@ export function ModelQuiz({ open, setOpen, response, questions }) {
                       Student's Answer: {studentAnswer || "No answer provided"}
                     </p>
                     <p className="text-sm text-gray-600">
-                        Correct Answer: {response?.response?.[index]} 
+                        Correct Answer: {item?.correctAnswer} 
                       </p>
                     </>
                   )}
@@ -174,7 +186,7 @@ export function ModelQuiz({ open, setOpen, response, questions }) {
                         Student's Answer: {studentAnswer || "No answer provided"}
                       </p>
                       <p className="text-sm text-gray-600">
-                        Correct Answer: {response?.response?.[index]}
+                        Correct Answer: {item?.options?.[index]}
                       </p>
                     </div>
                   )}
@@ -182,7 +194,11 @@ export function ModelQuiz({ open, setOpen, response, questions }) {
                   {item.type === "Multiple Choice" && (
                     <div>
                       <p className="text-base">
-                        Student's Answer:{" "} {response?.response?.[index]} 
+                        Student's Answer:{" "}  
+                        {response?.response?.[index]?.map((res, idx) => (
+                        <p key={idx}>{res}</p>  
+                      ))}
+
                       </p>
                       <p className="text-sm text-gray-600">
                         Correct Answers:{" "}
