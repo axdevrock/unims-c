@@ -8,6 +8,7 @@ const Assignment = ({ open, setopen,courseId }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [file, setFile] = useState(null);
+  const [type, setType] = useState('PDF')
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form submission
@@ -22,10 +23,12 @@ const Assignment = ({ open, setopen,courseId }) => {
     formData.append('description', description);
     formData.append('courseId', courseId);
     formData.append('file', file);
+    formData.append('type', type);
+
+    
 
     try {
-      const res = await axios.post('http://localhost:8000/api/v1/professor/post-Assignment', formData);
-
+      const res = await axios.post('/professor/post-Assignment', formData); 
       if (res.data.success) {
         toast.success('Assignment posted successfully!');
         setTitle('');
@@ -60,6 +63,19 @@ const Assignment = ({ open, setopen,courseId }) => {
               <br />
               <label htmlFor="description">Description:</label>
               <input type="text" id="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+              <br />
+              <div>
+              <label style={{marginRight:"20px"}} htmlFor="type">Type:</label>
+                  <select
+                    id="type"
+                    value={type}
+                    onChange={(e) => setType(e.target.value)}
+                   
+                  >
+                    <option value="PDF">PDF</option>
+                    <option value="Text">Text</option>
+                  </select>
+            </div>
               <br />
               <label htmlFor="file">File:</label>
               <input type="file" id="file" onChange={(e) => setFile(e.target.files[0])} />

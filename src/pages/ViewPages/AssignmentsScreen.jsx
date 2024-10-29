@@ -119,7 +119,10 @@ const ViewSubmissionModal = ({ isOpen, onClose, submission, onUpdateMarks, newMa
                 <div className={style.modalContent}>
                     <span className={style.closeBtn} onClick={onClose}>&times;</span>
                     <iframe src={source} height='100%' width='100%'></iframe>
-                    <div>
+                    <div className='mxmp'>
+                    {submission?.text}
+                    </div>
+                    <div className="opod">
                         <label htmlFor="marks">New Marks:</label>
                         <input type="number" id="marks" name="marks" value={newMarks} onChange={(e) => setNewMarks(e.target.value)} />
                         <button onClick={handleUpdateMarks}>Update Marks</button>

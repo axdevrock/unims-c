@@ -7,8 +7,13 @@ import {  useNavigate, useParams } from "react-router-dom";
 import { useUserContext } from '../../../context/userContext';
 
 const AssignmentList = ({ assignmentList }) => {
-  const URL = import.meta.env.VITE_URL;
+  const URL = 'https://localhost:8000/uploads' 
+  // import.meta.env.VITE_URL;
   const source = `${URL}/${assignmentList?.fileUrl}`
+  console.log('-----------------');
+  console.log(source);
+  
+  
 
     
     return (
@@ -37,8 +42,7 @@ const AssignmentStudentScreen = () => {
         try {
             const res = await axios.post('/student/get-an-Assignment', { courseId : id, studentId:user?._id });
             if (res.data.success) {
-                console.log(res.data);
-                toast("single fetched successfully!");
+                console.log(res.data); 
                 setassignmentList(res.data.Assignments);
             } else {
                 toast.error("Failed to fetch Assignment. Please try again.");
@@ -51,17 +55,23 @@ const AssignmentStudentScreen = () => {
     
     
       useEffect(() => {
-      
             getAllAssignment()
     }, []);
 
     const [file, setFile] = useState(null);
+    const [text, setText] = useState('')
 
     const handleSubmit=async ()=>{
-        const formData = new FormData(); 
+
+      if(!text){
+        toast('Description field is empty!');
+        return;
+      }
+    const formData = new FormData(); 
     formData.append('id', assignmentList?._id);
     formData.append('file', file);
     formData.append('sId', user?._id);
+    formData.append('text', text);
 
     try {
         const res = await axios.post('/student/submit-assignment', formData);
@@ -93,10 +103,12 @@ const AssignmentStudentScreen = () => {
                 {assignmentList === null && <p>Currently there are no new Assignmetns posted</p>}
                 {assignmentList && <AssignmentList assignmentList={assignmentList}/>}
                 {assignmentList !== null && 
-                <div className={style.submitt}>
+                <div  className={style.submitt}>
                 <h2>Submit Assignment</h2>
-                <input type="file" id="file" onChange={(e) => setFile(e.target.files[0])} /> <button onClick={handleSubmit} >Submit</button>
-              
+                <input type="file" id="file" onChange={(e) => setFile(e.target.files[0])} /> 
+                <br/>
+                <textarea  placeholder='Enter the description/Ansewr' type='text' onChange={(e) => setText(e.target.value)} value={text}  />
+                <button onClick={handleSubmit} >Submit</button>
                 </div>}
                 
             </div>

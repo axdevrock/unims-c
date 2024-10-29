@@ -59,6 +59,15 @@ a{
 }
 
 .day.present {
-  background-color: green; /* Highlight color for present days */
-  color: white; /* Change text color for better visibility */
+  background-color: green;
+  color: white;
+}
+.mxmp{
+  background-color: slategrey;
+  padding: 12px;
+  color: white;
+}
+.opod{
+  background-color: aliceblue;
+
 }
